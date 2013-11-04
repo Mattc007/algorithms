@@ -1,5 +1,16 @@
 module NQueens
   class Solver
+    def self.solve(n=8, show_board=true, strategy=BruteForceStrategy)
+      strategy.solve(n, show_board)
+    end
+  end
+
+  class Strategy
+    def self.solve(n=8, show_board=true)
+    end
+  end
+
+  class BruteForceStrategy < Strategy
     def self.solve(n=8, show_board=true)
       raise if n < 1
 
